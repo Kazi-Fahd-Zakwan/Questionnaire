@@ -13,7 +13,7 @@
 
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="titleHelp" placeholder="Enter title">
+                            <input name="title" type="text" class="form-control" id="title" aria-describedby="titleHelp" placeholder="Enter title">
                             <small id="titleHelp" class="form-text text-muted">Give a interesting questionnaire.</small>
 
                             @error('title')
@@ -23,7 +23,7 @@
 
                         <div class="form-group">
                             <label for="purpose">Purpose</label>
-                            <input name="purpose" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="purposeHelp" placeholder="Enter Purpose">
+                            <input name="purpose" type="text" class="form-control" id="purpose" aria-describedby="purposeHelp" placeholder="Enter Purpose">
                             <small id="purposeHelp" class="form-text text-muted">Giving a purpose will increase responses.</small>
 
                             @error('purpose')

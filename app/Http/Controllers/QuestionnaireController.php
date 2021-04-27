@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use function PHPUnit\Framework\at;
+use App\Models\Questionnaire;
 
 class QuestionnaireController extends Controller
 {
@@ -27,7 +28,10 @@ class QuestionnaireController extends Controller
         return redirect('/questionnaires/'.$questionnaire->id);
     }
 
-    public function show(\App\Models\Questionnaire $questionnaire){
+    public function show(Questionnaire $questionnaire){
+
+        $questionnaire->load('questions.answers.responses');
+
         return view('questionnaire.show', compact('questionnaire'));
     }
 }
